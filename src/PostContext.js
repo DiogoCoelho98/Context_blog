@@ -46,14 +46,15 @@ function PostProvider({ children }) {
 
   return (
     // 2) PROVIDE VALUE TO CHILD COMPONENTS
-    <PostContext.Provider value={value}>{children}</PostContext.Provider>
+    <PostContext.Provider value={value}>
+      {children}
+    </PostContext.Provider>
   );
 }
-// Custom hook
+// CUSTOM HOOK
 function usePosts() {
   const context = useContext(PostContext);
   if (context === undefined)
-    // This error will pop if usePosts() it's used outside of <PostProvider /> (check dev tools)
     throw new Error("PostContext was used outside of the PostProvider");
   return context;
 }
