@@ -1,1 +1,1 @@
-Small project with the goal of adding some practice with useContext() hook provided by react.
+Small project to practice React Context and hooks related with performance (useMemo()/useCallback()).
